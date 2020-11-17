@@ -1,9 +1,11 @@
-<h1><%= @pokemon.name %></h1>
+<div class="mt-5 jumbotron">
 
-<h3>This pokemon is a <%= @pokemon.species %> type</h3>
+  <h1 class = "font-weight-bold"><%= @pokemon.name.capitalize %></h1>
 
-<h5>This pokemon was found <%= @pokemon.found_days_ago %> days ago near <%= @pokemon.address %></h5>
+  <h6 class = "text-muted">Type: <%= @pokemon.species %></h3>
 
-<%= link_to '🏠', pokemons_path  %>
-<%= link_to '🔧', edit_pokemon_path(@pokemon) %>
-<%= link_to '🗑', pokemon_path(@pokemon), method: :delete  %>
+  <p class = "font-weight-light text-muted">Found on <%= @pokemon.found_on %> near <%= @pokemon.address %></p>
+
+  <%# Remember with linktos, the string is the text of the link, and the second argument should always be the path to wherever you want the link to go, then you can add other elements such as classes, etc %>
+  <%= link_to 'Go back home', pokemons_path, class: "btn btn-primary"%>
+</div>
