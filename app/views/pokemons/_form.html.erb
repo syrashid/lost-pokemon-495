@@ -2,7 +2,8 @@
 <%= simple_form_for pokemon do |f| %>
   <%= f.input :name %>
   <%= f.input :address %>
-  <%= f.input :species, collection: Pokemon::SPECIES %>
+  <%# When we want to provide users a drop down to choose from we use the collection argument and pass the collection of items we'd like the user to choose from.  This is where our constant in our model comes in handy! %>
+  <%= f.input :species, collection: Pokemon::TYPES %>
   <%= f.input :found_on %>
   <%= f.submit class: "btn btn-primary" %>
 <% end %>
