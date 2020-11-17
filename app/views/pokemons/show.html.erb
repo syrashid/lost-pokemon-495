@@ -1,0 +1,7 @@
+<h1><%= @pokemon.name %></h1>
+
+<h3>This pokemon is a <%= @pokemon.species %> type</h3>
+
+<h5>This pokemon was found <%= @pokemon.found_days_ago %> days ago near <%= @pokemon.address %></h5>
+
+<%= link_to '🏠', pokemons_path  %>

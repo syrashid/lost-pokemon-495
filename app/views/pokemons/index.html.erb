@@ -3,7 +3,7 @@
 <ul>
   <% @pokemons.each do |pokemon| %>
     <li>
-      <%= pokemon.name %> was found near <%= pokemon.address %> <%= pokemon.found_days_ago %> days ago
+      <%= link_to pokemon.name, pokemon_path(pokemon) %> was found near <%= pokemon.address %> <%= pokemon.found_days_ago %> days ago
     </li>
   <% end %>
 </ul>
