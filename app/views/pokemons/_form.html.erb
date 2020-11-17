@@ -1,0 +1,9 @@
+<div class="container">
+  <%= simple_form_for pokemon do |f| %>
+    <%= f.input :name %>
+    <%= f.input :address %>
+    <%= f.input :species, collection: Pokemon::TYPES %>
+    <%= f.input :found_on %>
+    <%= f.button :submit %>
+  <% end %>
+</div>

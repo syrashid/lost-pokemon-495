@@ -1,9 +1,13 @@
-<h1> All of our found Poke'mon </h1>
+<div class="container">
+  <h1> All of our found Poke'mon </h1>
 
-<ul>
-  <% @pokemons.each do |pokemon| %>
-    <li>
-      <%= link_to pokemon.name, pokemon_path(pokemon) %> was found near <%= pokemon.address %> <%= pokemon.found_days_ago %> days ago
-    </li>
-  <% end %>
-</ul>
+  <%= link_to "Add a new pokemon", new_pokemon_path %>
+
+  <ul>
+    <% @pokemons.each do |pokemon| %>
+      <li>
+        <%= link_to pokemon.name, pokemon_path(pokemon) %> was found near <%= pokemon.address %> <%= pokemon.found_days_ago %> days ago
+      </li>
+    <% end %>
+  </ul>
+</div>
