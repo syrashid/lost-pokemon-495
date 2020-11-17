@@ -1,0 +1,9 @@
+<h1> All of our found Poke'mon </h1>
+
+<ul>
+  <% @pokemons.each do |pokemon| %>
+    <li>
+      <%= pokemon.name %> was found near <%= pokemon.address %> <%= pokemon.found_days_ago %> days ago
+    </li>
+  <% end %>
+</ul>
